@@ -218,7 +218,8 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="EInterface">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="abstractmethod" eType="#//AbstractMethod"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="abstractmethod" eType="#//AbstractMethod"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Library">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -246,7 +247,8 @@
         eType="#//EClass"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AbstractClass" eSuperTypes="#//EClass">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="abstractmethod" eType="#//AbstractMethod"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="abstractmethod" eType="#//AbstractMethod"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Epackage">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
