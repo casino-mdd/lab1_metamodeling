@@ -4223,7 +4223,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_XAQ-p4KZEem36KZRviXRTQ" name="[0..1] catches" sourceNode="_W_il4IKZEem36KZRviXRTQ" targetNode="_W-xw4IKZEem36KZRviXRTQ">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_XAQ-p4KZEem36KZRviXRTQ" name="[0..*] catches" sourceNode="_W_il4IKZEem36KZRviXRTQ" targetNode="_W-xw4IKZEem36KZRviXRTQ">
       <target xmi:type="ecore:EReference" href="unified.ecore#//Reducer/catches"/>
       <semanticElements xmi:type="ecore:EReference" href="unified.ecore#//Reducer/catches"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_XAQ-qIKZEem36KZRviXRTQ" routingStyle="manhattan" strokeColor="0,0,0">
@@ -5337,7 +5337,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC%20ESupertypes']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_HhUq04-aEemqCdfWyq6NPw" name="[0..1] abstractmethod" sourceNode="_6U4Q4IKbEem36KZRviXRTQ" targetNode="_6I484I-MEem9Yp7HCnhbiQ">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_HhUq04-aEemqCdfWyq6NPw" name="[0..*] abstractmethod" sourceNode="_6U4Q4IKbEem36KZRviXRTQ" targetNode="_6I484I-MEem9Yp7HCnhbiQ">
       <target xmi:type="ecore:EReference" href="unified.ecore#//AbstractClass/abstractmethod"/>
       <semanticElements xmi:type="ecore:EReference" href="unified.ecore#//AbstractClass/abstractmethod"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_HhUq1I-aEemqCdfWyq6NPw" description="_-ayFYIKSEem36KZRviXRTQ" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
@@ -5350,7 +5350,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_KBRfCI-aEemqCdfWyq6NPw" name="[0..1] abstractmethod" sourceNode="_6UgdcIKbEem36KZRviXRTQ" targetNode="_6I484I-MEem9Yp7HCnhbiQ">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_KBRfCI-aEemqCdfWyq6NPw" name="[0..*] abstractmethod" sourceNode="_6UgdcIKbEem36KZRviXRTQ" targetNode="_6I484I-MEem9Yp7HCnhbiQ">
       <target xmi:type="ecore:EReference" href="unified.ecore#//EInterface/abstractmethod"/>
       <semanticElements xmi:type="ecore:EReference" href="unified.ecore#//EInterface/abstractmethod"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_KBRfCY-aEemqCdfWyq6NPw" description="_-ayFYIKSEem36KZRviXRTQ" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">

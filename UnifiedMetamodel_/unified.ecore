@@ -190,7 +190,8 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Reducer">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="catches" eType="#//ActionCreator"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="catches" upperBound="-1"
+        eType="#//ActionCreator"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="reducerDirectory" eType="#//Directory"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ModuleFront">
@@ -218,8 +219,8 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="EInterface">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="abstractmethod" eType="#//AbstractMethod"
-        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="abstractmethod" upperBound="-1"
+        eType="#//AbstractMethod" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Library">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -247,8 +248,8 @@
         eType="#//EClass"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AbstractClass" eSuperTypes="#//EClass">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="abstractmethod" eType="#//AbstractMethod"
-        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="abstractmethod" upperBound="-1"
+        eType="#//AbstractMethod" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Epackage">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
