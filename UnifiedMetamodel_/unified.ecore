@@ -67,9 +67,10 @@
   <eClassifiers xsi:type="ecore:EClass" name="SpecialEntity" eSuperTypes="#//Entity">
     <eStructuralFeatures xsi:type="ecore:EReference" name="transaction" lowerBound="1"
         upperBound="-1" eType="#//Transaction" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="role" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="performs" lowerBound="1"
         eType="#//Authentication"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="role" lowerBound="1" eType="#//Role"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GeneralEntity" eSuperTypes="#//Entity"/>
   <eClassifiers xsi:type="ecore:EClass" name="Entity">
@@ -292,4 +293,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="arguments" upperBound="-1"
         eType="#//EClass"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Role"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Admin" eSuperTypes="#//Role"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Aux" eSuperTypes="#//Role"/>
 </ecore:EPackage>
