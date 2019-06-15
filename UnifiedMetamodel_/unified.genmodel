@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/UnifiedMetamodel_/src" modelPluginID="UnifiedMetamodel_"
+    modelName="Unified" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>unified.ecore</foreignModel>
+  <genPackages prefix="UnifiedMetamodel_" disposableProviderFactory="true" ecorePackage="unified.ecore#/">
+    <genClasses ecoreClass="unified.ecore#//Ejb"/>
+    <genClasses ecoreClass="unified.ecore#//LayerSegment">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference unified.ecore#//LayerSegment/allowToUse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference unified.ecore#//LayerSegment/layersegment"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute unified.ecore#//LayerSegment/name"/>
+    </genClasses>
+    <genClasses ecoreClass="unified.ecore#//Dto"/>
+    <genClasses ecoreClass="unified.ecore#//Store"/>
+    <genClasses ecoreClass="unified.ecore#//UI"/>
+    <genClasses ecoreClass="unified.ecore#//Layer">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference unified.ecore#//Layer/layerSegments"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute unified.ecore#//Layer/name"/>
+    </genClasses>
+    <genClasses ecoreClass="unified.ecore#//RestEntity"/>
+    <genClasses ecoreClass="unified.ecore#//Facade"/>
+    <genClasses ecoreClass="unified.ecore#//War"/>
+    <genClasses ecoreClass="unified.ecore#//Component">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference unified.ecore#//Component/layers"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference unified.ecore#//Component/relations"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute unified.ecore#//Component/name"/>
+    </genClasses>
+    <genClasses ecoreClass="unified.ecore#//RelationArch">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference unified.ecore#//RelationArch/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference unified.ecore#//RelationArch/target"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute unified.ecore#//RelationArch/name"/>
+    </genClasses>
+    <genClasses ecoreClass="unified.ecore#//ArquitectureMetamodel">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference unified.ecore#//ArquitectureMetamodel/components"/>
+    </genClasses>
+    <genClasses ecoreClass="unified.ecore#//Containers"/>
+    <genClasses ecoreClass="unified.ecore#//Pojo"/>
+    <genClasses ecoreClass="unified.ecore#//Services"/>
+    <genClasses ecoreClass="unified.ecore#//Metamodel">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference unified.ecore#//Metamodel/arquitecturemetamodel"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference unified.ecore#//Metamodel/domainmetamodel"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference unified.ecore#//Metamodel/technologymetamodel"/>
+    </genClasses>
+    <genClasses ecoreClass="unified.ecore#//Read"/>
+    <genClasses ecoreClass="unified.ecore#//Create"/>
+    <genClasses ecoreClass="unified.ecore#//Sale"/>
+    <genClasses ecoreClass="unified.ecore#//Exchange"/>
+    <genClasses ecoreClass="unified.ecore#//Composition"/>
+    <genClasses ecoreClass="unified.ecore#//Operations">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference unified.ecore#//Operations/entity"/>
+    </genClasses>
+    <genClasses ecoreClass="unified.ecore#//Login"/>
+    <genClasses ecoreClass="unified.ecore#//Module">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute unified.ecore#//Module/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference unified.ecore#//Module/submodule"/>
+    </genClasses>
+    <genClasses ecoreClass="unified.ecore#//SpecialEntity">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference unified.ecore#//SpecialEntity/transaction"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute unified.ecore#//SpecialEntity/type"/>
+    </genClasses>
+    <genClasses ecoreClass="unified.ecore#//GeneralEntity"/>
+    <genClasses ecoreClass="unified.ecore#//Entity">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute unified.ecore#//Entity/name"/>
+    </genClasses>
+    <genClasses ecoreClass="unified.ecore#//RelationDom">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference unified.ecore#//RelationDom/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference unified.ecore#//RelationDom/target"/>
+    </genClasses>
+    <genClasses ecoreClass="unified.ecore#//Transaction">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference unified.ecore#//Transaction/update"/>
+    </genClasses>
+    <genClasses ecoreClass="unified.ecore#//Submodule">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute unified.ecore#//Submodule/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference unified.ecore#//Submodule/operations"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference unified.ecore#//Submodule/entity"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference unified.ecore#//Submodule/relation"/>
+    </genClasses>
+    <genClasses ecoreClass="unified.ecore#//DomainMetamodel">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference unified.ecore#//DomainMetamodel/module"/>
+    </genClasses>
+    <genClasses ecoreClass="unified.ecore#//ActionDispatcher">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference unified.ecore#//ActionDispatcher/use"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute unified.ecore#//ActionDispatcher/name"/>
+    </genClasses>
+    <genClasses ecoreClass="unified.ecore#//Router"/>
+    <genClasses ecoreClass="unified.ecore#//JSON"/>
+    <genClasses ecoreClass="unified.ecore#//MD"/>
+    <genClasses ecoreClass="unified.ecore#//CSS"/>
+    <genClasses ecoreClass="unified.ecore#//APICall"/>
+    <genClasses ecoreClass="unified.ecore#//Directory">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute unified.ecore#//Directory/purpose"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute unified.ecore#//Directory/isRoot"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference unified.ecore#//Directory/directories"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference unified.ecore#//Directory/files"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute unified.ecore#//Directory/name"/>
+    </genClasses>
+    <genClasses ecoreClass="unified.ecore#//State">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference unified.ecore#//State/action"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference unified.ecore#//State/reducer"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference unified.ecore#//State/use"/>
+    </genClasses>
+    <genClasses ecoreClass="unified.ecore#//UIFront"/>
+    <genClasses ecoreClass="unified.ecore#//Visualizer"/>
+    <genClasses ecoreClass="unified.ecore#//Design"/>
+    <genClasses ecoreClass="unified.ecore#//ActionCreator">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute unified.ecore#//ActionCreator/name"/>
+    </genClasses>
+    <genClasses ecoreClass="unified.ecore#//RouterComponent">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference unified.ecore#//RouterComponent/routes"/>
+    </genClasses>
+    <genClasses ecoreClass="unified.ecore#//Container">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference unified.ecore#//Container/dispatches"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference unified.ecore#//Container/maps"/>
+    </genClasses>
+    <genClasses ecoreClass="unified.ecore#//ServicesFront">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference unified.ecore#//ServicesFront/use"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute unified.ecore#//ServicesFront/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference unified.ecore#//ServicesFront/isOrganizedIn"/>
+    </genClasses>
+    <genClasses ecoreClass="unified.ecore#//Functionality">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute unified.ecore#//Functionality/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference unified.ecore#//Functionality/components"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference unified.ecore#//Functionality/state"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference unified.ecore#//Functionality/services"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference unified.ecore#//Functionality/IsOrganizedBy"/>
+    </genClasses>
+    <genClasses ecoreClass="unified.ecore#//JS"/>
+    <genClasses ecoreClass="unified.ecore#//Action">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference unified.ecore#//Action/actiondispatcher"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference unified.ecore#//Action/actioncreator"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference unified.ecore#//Action/actionDirectory"/>
+    </genClasses>
+    <genClasses ecoreClass="unified.ecore#//Redux"/>
+    <genClasses ecoreClass="unified.ecore#//TechFront">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference unified.ecore#//TechFront/functionalities"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference unified.ecore#//TechFront/modules"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference unified.ecore#//TechFront/directories"/>
+    </genClasses>
+    <genClasses ecoreClass="unified.ecore#//File">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute unified.ecore#//File/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute unified.ecore#//File/name"/>
+    </genClasses>
+    <genClasses ecoreClass="unified.ecore#//ComponentFront">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference unified.ecore#//ComponentFront/use"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute unified.ecore#//ComponentFront/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference unified.ecore#//ComponentFront/inWithin"/>
+    </genClasses>
+    <genClasses ecoreClass="unified.ecore#//Reducer">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute unified.ecore#//Reducer/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference unified.ecore#//Reducer/catches"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference unified.ecore#//Reducer/reducerDirectory"/>
+    </genClasses>
+    <genClasses ecoreClass="unified.ecore#//ModuleFront">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute unified.ecore#//ModuleFront/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference unified.ecore#//ModuleFront/isPresentIn"/>
+    </genClasses>
+    <genClasses ecoreClass="unified.ecore#//TechnologyMetamodel">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference unified.ecore#//TechnologyMetamodel/techback"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference unified.ecore#//TechnologyMetamodel/techfront"/>
+    </genClasses>
+    <genClasses ecoreClass="unified.ecore#//TechBack">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference unified.ecore#//TechBack/jee_project"/>
+    </genClasses>
+    <genClasses ecoreClass="unified.ecore#//JEE_Project">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute unified.ecore#//JEE_Project/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference unified.ecore#//JEE_Project/subproject"/>
+    </genClasses>
+    <genClasses ecoreClass="unified.ecore#//NativeClass">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute unified.ecore#//NativeClass/primitiveRef"/>
+    </genClasses>
+    <genClasses ecoreClass="unified.ecore#//InterfaceClass"/>
+    <genClasses ecoreClass="unified.ecore#//Library">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute unified.ecore#//Library/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute unified.ecore#//Library/isNative"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference unified.ecore#//Library/nativeclass"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference unified.ecore#//Library/anotationi"/>
+    </genClasses>
+    <genClasses ecoreClass="unified.ecore#//Jee">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference unified.ecore#//Jee/jee_project"/>
+    </genClasses>
+    <genClasses ecoreClass="unified.ecore#//Attribute">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute unified.ecore#//Attribute/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference unified.ecore#//Attribute/anotationi"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference unified.ecore#//Attribute/type"/>
+    </genClasses>
+    <genClasses ecoreClass="unified.ecore#//GenericClass">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference unified.ecore#//GenericClass/implement"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference unified.ecore#//GenericClass/extends"/>
+    </genClasses>
+    <genClasses ecoreClass="unified.ecore#//MethodBack">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute unified.ecore#//MethodBack/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference unified.ecore#//MethodBack/anotationi"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference unified.ecore#//MethodBack/return"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference unified.ecore#//MethodBack/arguments"/>
+    </genClasses>
+    <genClasses ecoreClass="unified.ecore#//AbstractClass"/>
+    <genClasses ecoreClass="unified.ecore#//Epackage">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute unified.ecore#//Epackage/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference unified.ecore#//Epackage/class"/>
+    </genClasses>
+    <genClasses ecoreClass="unified.ecore#//EClass">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference unified.ecore#//EClass/attribute"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute unified.ecore#//EClass/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference unified.ecore#//EClass/method"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference unified.ecore#//EClass/anotationi"/>
+    </genClasses>
+    <genClasses ecoreClass="unified.ecore#//Anotationi">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute unified.ecore#//Anotationi/properties"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference unified.ecore#//Anotationi/descriptor"/>
+    </genClasses>
+    <genClasses ecoreClass="unified.ecore#//Subproject">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute unified.ecore#//Subproject/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference unified.ecore#//Subproject/descriptor"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference unified.ecore#//Subproject/package"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference unified.ecore#//Subproject/library"/>
+    </genClasses>
+    <genClasses ecoreClass="unified.ecore#//Descriptor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute unified.ecore#//Descriptor/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute unified.ecore#//Descriptor/path"/>
+    </genClasses>
+    <genClasses ecoreClass="unified.ecore#//JavaScript"/>
+  </genPackages>
+</genmodel:GenModel>
