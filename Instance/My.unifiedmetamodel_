@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<UnifiedMetamodel_:Metamodel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:UnifiedMetamodel_="http://UnifiedMetamodel_">
+  <domainmetamodel>
+    <module name="Authentication">
+      <submodule name="User">
+        <operations xsi:type="UnifiedMetamodel_:Read" operates_on="//@domainmetamodel/@module.0/@submodule.0/@entity.0"/>
+        <operations xsi:type="UnifiedMetamodel_:Create" operates_on="//@domainmetamodel/@module.0/@submodule.0/@entity.0"/>
+        <entity xsi:type="UnifiedMetamodel_:SpecialEntity" name="User">
+          <property name="name" type="String"/>
+          <property name="Address" type="String"/>
+          <transaction xsi:type="UnifiedMetamodel_:sale" operates_on="//@domainmetamodel/@module.5/@submodule.0/@entity.0 //@domainmetamodel/@module.1/@submodule.1/@entity.0"/>
+          <transaction xsi:type="UnifiedMetamodel_:exchange" operates_on="//@domainmetamodel/@module.2/@submodule.1/@entity.0 //@domainmetamodel/@module.1/@submodule.1/@entity.0 //@domainmetamodel/@module.1/@submodule.0/@entity.0"/>
+          <role/>
+        </entity>
+      </submodule>
+    </module>
+    <module name="Exchange ">
+      <submodule name="Management">
+        <operations xsi:type="UnifiedMetamodel_:Read" operates_on="//@domainmetamodel/@module.1/@submodule.0/@entity.0"/>
+        <operations xsi:type="UnifiedMetamodel_:Create" operates_on="//@domainmetamodel/@module.1/@submodule.0/@entity.0"/>
+        <entity xsi:type="UnifiedMetamodel_:GeneralEntity" name="Exchange">
+          <property name="name" type="String"/>
+        </entity>
+      </submodule>
+      <submodule name="Points report">
+        <operations xsi:type="UnifiedMetamodel_:Read" operates_on="//@domainmetamodel/@module.1/@submodule.1/@entity.0"/>
+        <entity xsi:type="UnifiedMetamodel_:GeneralEntity" name="Point">
+          <property name="name" type="String"/>
+        </entity>
+      </submodule>
+    </module>
+    <module name="Office">
+      <submodule name="Mangement">
+        <operations xsi:type="UnifiedMetamodel_:Read" operates_on="//@domainmetamodel/@module.2/@submodule.0/@entity.0"/>
+        <operations xsi:type="UnifiedMetamodel_:Create" operates_on="//@domainmetamodel/@module.2/@submodule.0/@entity.0"/>
+        <entity xsi:type="UnifiedMetamodel_:GeneralEntity" name="Office">
+          <property name="name" type="String"/>
+        </entity>
+      </submodule>
+      <submodule name="RewardManagement">
+        <operations xsi:type="UnifiedMetamodel_:Create" operates_on="//@domainmetamodel/@module.2/@submodule.1/@entity.0"/>
+        <operations xsi:type="UnifiedMetamodel_:Read" operates_on="//@domainmetamodel/@module.2/@submodule.1/@entity.0"/>
+        <entity xsi:type="UnifiedMetamodel_:GeneralEntity" name="Reward">
+          <property name="name" type="String"/>
+        </entity>
+      </submodule>
+    </module>
+    <module name="Employee">
+      <submodule name="Management">
+        <operations xsi:type="UnifiedMetamodel_:Read" operates_on="//@domainmetamodel/@module.3/@submodule.0/@entity.0"/>
+        <operations xsi:type="UnifiedMetamodel_:Create" operates_on="//@domainmetamodel/@module.3/@submodule.0/@entity.0"/>
+        <entity xsi:type="UnifiedMetamodel_:GeneralEntity" name="Employee">
+          <property name="name" type="String"/>
+        </entity>
+      </submodule>
+    </module>
+    <module name="Client">
+      <submodule name="Management">
+        <operations xsi:type="UnifiedMetamodel_:Read" operates_on="//@domainmetamodel/@module.4/@submodule.0/@entity.0"/>
+        <operations xsi:type="UnifiedMetamodel_:Create" operates_on="//@domainmetamodel/@module.4/@submodule.0/@entity.0"/>
+        <entity xsi:type="UnifiedMetamodel_:GeneralEntity" name="Client">
+          <property name="name" type="String"/>
+        </entity>
+      </submodule>
+    </module>
+    <module name="Sale">
+      <submodule name="Management">
+        <operations xsi:type="UnifiedMetamodel_:Read" operates_on="//@domainmetamodel/@module.5/@submodule.0/@entity.0"/>
+        <operations xsi:type="UnifiedMetamodel_:Create" operates_on="//@domainmetamodel/@module.5/@submodule.0/@entity.0"/>
+        <entity xsi:type="UnifiedMetamodel_:GeneralEntity" name="Sale">
+          <property name="name" type="String"/>
+        </entity>
+      </submodule>
+    </module>
+  </domainmetamodel>
+</UnifiedMetamodel_:Metamodel>

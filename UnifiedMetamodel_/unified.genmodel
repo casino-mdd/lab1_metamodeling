@@ -45,40 +45,41 @@
     </genClasses>
     <genClasses ecoreClass="unified.ecore#//Read"/>
     <genClasses ecoreClass="unified.ecore#//Create"/>
-    <genClasses ecoreClass="unified.ecore#//Sale"/>
-    <genClasses ecoreClass="unified.ecore#//Exchange"/>
+    <genClasses ecoreClass="unified.ecore#//sale"/>
+    <genClasses ecoreClass="unified.ecore#//exchange"/>
     <genClasses ecoreClass="unified.ecore#//Composition"/>
     <genClasses ecoreClass="unified.ecore#//Operations">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference unified.ecore#//Operations/entity"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference unified.ecore#//Operations/operates_on"/>
     </genClasses>
-    <genClasses ecoreClass="unified.ecore#//Login"/>
     <genClasses ecoreClass="unified.ecore#//Module">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute unified.ecore#//Module/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference unified.ecore#//Module/submodule"/>
     </genClasses>
     <genClasses ecoreClass="unified.ecore#//SpecialEntity">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference unified.ecore#//SpecialEntity/transaction"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute unified.ecore#//SpecialEntity/type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference unified.ecore#//SpecialEntity/role"/>
     </genClasses>
     <genClasses ecoreClass="unified.ecore#//GeneralEntity"/>
     <genClasses ecoreClass="unified.ecore#//Entity">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute unified.ecore#//Entity/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference unified.ecore#//Entity/property"/>
     </genClasses>
     <genClasses ecoreClass="unified.ecore#//RelationDom">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference unified.ecore#//RelationDom/source"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference unified.ecore#//RelationDom/target"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute unified.ecore#//RelationDom/name"/>
     </genClasses>
     <genClasses ecoreClass="unified.ecore#//Transaction">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference unified.ecore#//Transaction/update"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference unified.ecore#//Transaction/operates_on"/>
     </genClasses>
     <genClasses ecoreClass="unified.ecore#//Submodule">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute unified.ecore#//Submodule/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference unified.ecore#//Submodule/operations"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference unified.ecore#//Submodule/entity"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference unified.ecore#//Submodule/relation"/>
     </genClasses>
     <genClasses ecoreClass="unified.ecore#//DomainMetamodel">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference unified.ecore#//DomainMetamodel/module"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference unified.ecore#//DomainMetamodel/relationdom"/>
     </genClasses>
     <genClasses ecoreClass="unified.ecore#//ActionDispatcher">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference unified.ecore#//ActionDispatcher/use"/>
@@ -131,12 +132,13 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference unified.ecore#//Action/actiondispatcher"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference unified.ecore#//Action/actioncreator"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference unified.ecore#//Action/actionDirectory"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute unified.ecore#//Action/name"/>
     </genClasses>
     <genClasses ecoreClass="unified.ecore#//Redux"/>
-    <genClasses ecoreClass="unified.ecore#//TechFront">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference unified.ecore#//TechFront/functionalities"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference unified.ecore#//TechFront/modules"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference unified.ecore#//TechFront/directories"/>
+    <genClasses ecoreClass="unified.ecore#//ReactApp">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference unified.ecore#//ReactApp/functionalities"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference unified.ecore#//ReactApp/modules"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference unified.ecore#//ReactApp/directories"/>
     </genClasses>
     <genClasses ecoreClass="unified.ecore#//File">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute unified.ecore#//File/type"/>
@@ -160,8 +162,8 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference unified.ecore#//TechnologyMetamodel/techback"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference unified.ecore#//TechnologyMetamodel/techfront"/>
     </genClasses>
-    <genClasses ecoreClass="unified.ecore#//TechBack">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference unified.ecore#//TechBack/jee_project"/>
+    <genClasses ecoreClass="unified.ecore#//JavaApp">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference unified.ecore#//JavaApp/jee_project"/>
     </genClasses>
     <genClasses ecoreClass="unified.ecore#//JEE_Project">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute unified.ecore#//JEE_Project/name"/>
@@ -170,19 +172,19 @@
     <genClasses ecoreClass="unified.ecore#//NativeClass">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute unified.ecore#//NativeClass/primitiveRef"/>
     </genClasses>
-    <genClasses ecoreClass="unified.ecore#//InterfaceClass"/>
+    <genClasses ecoreClass="unified.ecore#//EInterface">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute unified.ecore#//EInterface/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference unified.ecore#//EInterface/abstractmethod"/>
+    </genClasses>
     <genClasses ecoreClass="unified.ecore#//Library">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute unified.ecore#//Library/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute unified.ecore#//Library/isNative"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference unified.ecore#//Library/nativeclass"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference unified.ecore#//Library/anotationi"/>
-    </genClasses>
-    <genClasses ecoreClass="unified.ecore#//Jee">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference unified.ecore#//Jee/jee_project"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference unified.ecore#//Library/annotation"/>
     </genClasses>
     <genClasses ecoreClass="unified.ecore#//Attribute">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute unified.ecore#//Attribute/name"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference unified.ecore#//Attribute/anotationi"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference unified.ecore#//Attribute/annotation"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference unified.ecore#//Attribute/type"/>
     </genClasses>
     <genClasses ecoreClass="unified.ecore#//GenericClass">
@@ -191,11 +193,13 @@
     </genClasses>
     <genClasses ecoreClass="unified.ecore#//MethodBack">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute unified.ecore#//MethodBack/name"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference unified.ecore#//MethodBack/anotationi"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference unified.ecore#//MethodBack/annotation"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference unified.ecore#//MethodBack/return"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference unified.ecore#//MethodBack/arguments"/>
     </genClasses>
-    <genClasses ecoreClass="unified.ecore#//AbstractClass"/>
+    <genClasses ecoreClass="unified.ecore#//AbstractClass">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference unified.ecore#//AbstractClass/abstractmethod"/>
+    </genClasses>
     <genClasses ecoreClass="unified.ecore#//Epackage">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute unified.ecore#//Epackage/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference unified.ecore#//Epackage/class"/>
@@ -204,11 +208,11 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference unified.ecore#//EClass/attribute"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute unified.ecore#//EClass/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference unified.ecore#//EClass/method"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference unified.ecore#//EClass/anotationi"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference unified.ecore#//EClass/annotation"/>
     </genClasses>
-    <genClasses ecoreClass="unified.ecore#//Anotationi">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute unified.ecore#//Anotationi/properties"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference unified.ecore#//Anotationi/descriptor"/>
+    <genClasses ecoreClass="unified.ecore#//Annotation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute unified.ecore#//Annotation/properties"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference unified.ecore#//Annotation/descriptor"/>
     </genClasses>
     <genClasses ecoreClass="unified.ecore#//Subproject">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute unified.ecore#//Subproject/name"/>
@@ -221,5 +225,22 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute unified.ecore#//Descriptor/path"/>
     </genClasses>
     <genClasses ecoreClass="unified.ecore#//JavaScript"/>
+    <genClasses ecoreClass="unified.ecore#//Util"/>
+    <genClasses ecoreClass="unified.ecore#//Reducers"/>
+    <genClasses ecoreClass="unified.ecore#//Actions"/>
+    <genClasses ecoreClass="unified.ecore#//Back"/>
+    <genClasses ecoreClass="unified.ecore#//Front"/>
+    <genClasses ecoreClass="unified.ecore#//Property">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute unified.ecore#//Property/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute unified.ecore#//Property/type"/>
+    </genClasses>
+    <genClasses ecoreClass="unified.ecore#//AbstractMethod">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute unified.ecore#//AbstractMethod/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference unified.ecore#//AbstractMethod/return"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference unified.ecore#//AbstractMethod/arguments"/>
+    </genClasses>
+    <genClasses ecoreClass="unified.ecore#//Role"/>
+    <genClasses ecoreClass="unified.ecore#//Admin"/>
+    <genClasses ecoreClass="unified.ecore#//Auxi"/>
   </genPackages>
 </genmodel:GenModel>

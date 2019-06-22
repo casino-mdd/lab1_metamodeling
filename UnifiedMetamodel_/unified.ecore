@@ -51,14 +51,13 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Read" eSuperTypes="#//Operations"/>
   <eClassifiers xsi:type="ecore:EClass" name="Create" eSuperTypes="#//Operations"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Sale" eSuperTypes="#//Transaction"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Exchange" eSuperTypes="#//Transaction"/>
+  <eClassifiers xsi:type="ecore:EClass" name="sale" eSuperTypes="#//Transaction"/>
+  <eClassifiers xsi:type="ecore:EClass" name="exchange" eSuperTypes="#//Transaction"/>
   <eClassifiers xsi:type="ecore:EClass" name="Composition" eSuperTypes="#//RelationDom"/>
   <eClassifiers xsi:type="ecore:EClass" name="Operations">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="entity" lowerBound="1"
-        upperBound="-1" eType="#//Entity"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="operates_on" lowerBound="1"
+        eType="#//Entity"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Authentication"/>
   <eClassifiers xsi:type="ecore:EClass" name="Module">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="submodule" lowerBound="1"
@@ -67,8 +66,6 @@
   <eClassifiers xsi:type="ecore:EClass" name="SpecialEntity" eSuperTypes="#//Entity">
     <eStructuralFeatures xsi:type="ecore:EReference" name="transaction" lowerBound="1"
         upperBound="-1" eType="#//Transaction" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="performs" lowerBound="1"
-        eType="#//Authentication"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="role" lowerBound="1" eType="#//Role"
         containment="true"/>
   </eClassifiers>
@@ -99,6 +96,8 @@
   <eClassifiers xsi:type="ecore:EClass" name="DomainMetamodel">
     <eStructuralFeatures xsi:type="ecore:EReference" name="module" lowerBound="1"
         upperBound="-1" eType="#//Module" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="relationdom" lowerBound="1"
+        upperBound="-1" eType="#//RelationDom" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ActionDispatcher">
     <eStructuralFeatures xsi:type="ecore:EReference" name="use" eType="#//ActionCreator"/>
@@ -289,6 +288,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="Front" eSuperTypes="#//Component"/>
   <eClassifiers xsi:type="ecore:EClass" name="Property">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AbstractMethod">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -298,5 +298,5 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Role"/>
   <eClassifiers xsi:type="ecore:EClass" name="Admin" eSuperTypes="#//Role"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Aux" eSuperTypes="#//Role"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Auxi" eSuperTypes="#//Role"/>
 </ecore:EPackage>
