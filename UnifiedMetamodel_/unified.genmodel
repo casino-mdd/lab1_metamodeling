@@ -58,7 +58,6 @@
     </genClasses>
     <genClasses ecoreClass="unified.ecore#//SpecialEntity">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference unified.ecore#//SpecialEntity/transaction"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference unified.ecore#//SpecialEntity/role"/>
     </genClasses>
     <genClasses ecoreClass="unified.ecore#//GeneralEntity"/>
     <genClasses ecoreClass="unified.ecore#//Entity">
@@ -239,8 +238,5 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference unified.ecore#//AbstractMethod/return"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference unified.ecore#//AbstractMethod/arguments"/>
     </genClasses>
-    <genClasses ecoreClass="unified.ecore#//Role"/>
-    <genClasses ecoreClass="unified.ecore#//Admin"/>
-    <genClasses ecoreClass="unified.ecore#//Auxi"/>
   </genPackages>
 </genmodel:GenModel>
