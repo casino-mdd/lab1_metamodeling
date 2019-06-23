@@ -48,6 +48,7 @@
         eType="#//DomainMetamodel" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="technologymetamodel" lowerBound="1"
         eType="#//TechnologyMetamodel" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Read" eSuperTypes="#//Operations"/>
   <eClassifiers xsi:type="ecore:EClass" name="Create" eSuperTypes="#//Operations"/>
@@ -66,8 +67,6 @@
   <eClassifiers xsi:type="ecore:EClass" name="SpecialEntity" eSuperTypes="#//Entity">
     <eStructuralFeatures xsi:type="ecore:EReference" name="transaction" lowerBound="1"
         upperBound="-1" eType="#//Transaction" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="role" lowerBound="1" eType="#//Role"
-        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GeneralEntity" eSuperTypes="#//Entity"/>
   <eClassifiers xsi:type="ecore:EClass" name="Entity">
@@ -80,7 +79,6 @@
         eType="#//Entity"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
         eType="#//Entity"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Transaction">
     <eStructuralFeatures xsi:type="ecore:EReference" name="operates_on" lowerBound="1"
@@ -296,7 +294,4 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="arguments" upperBound="-1"
         eType="#//EClass"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Role"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Admin" eSuperTypes="#//Role"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Auxi" eSuperTypes="#//Role"/>
 </ecore:EPackage>

@@ -1,16 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<UnifiedMetamodel_:Metamodel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:UnifiedMetamodel_="http://UnifiedMetamodel_">
+<UnifiedMetamodel_:Metamodel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:UnifiedMetamodel_="http://UnifiedMetamodel_" name="Casino">
   <domainmetamodel>
     <module name="Authentication">
       <submodule name="User">
         <operations xsi:type="UnifiedMetamodel_:Read" operates_on="//@domainmetamodel/@module.0/@submodule.0/@entity.0"/>
         <operations xsi:type="UnifiedMetamodel_:Create" operates_on="//@domainmetamodel/@module.0/@submodule.0/@entity.0"/>
-        <entity xsi:type="UnifiedMetamodel_:SpecialEntity" name="User">
-          <property name="name" type="String"/>
-          <property name="Address" type="String"/>
+        <entity xsi:type="UnifiedMetamodel_:SpecialEntity" name="UserAcc">
+          <property name="idUserAcc" type="Num"/>
+          <property name="idEmployee" type="Num"/>
+          <property name="username" type="String"/>
+          <property name="password" type="String"/>
+          <property name="updatedAt" type="Date"/>
+          <property name="createdAt" type="Date"/>
+          <property name="isActive" type="Boolean"/>
+          <property name="profile" type="String"/>
           <transaction xsi:type="UnifiedMetamodel_:sale" operates_on="//@domainmetamodel/@module.5/@submodule.0/@entity.0 //@domainmetamodel/@module.1/@submodule.1/@entity.0"/>
           <transaction xsi:type="UnifiedMetamodel_:exchange" operates_on="//@domainmetamodel/@module.2/@submodule.1/@entity.0 //@domainmetamodel/@module.1/@submodule.1/@entity.0 //@domainmetamodel/@module.1/@submodule.0/@entity.0"/>
-          <role/>
         </entity>
       </submodule>
     </module>
@@ -25,7 +30,11 @@
       <submodule name="Points report">
         <operations xsi:type="UnifiedMetamodel_:Read" operates_on="//@domainmetamodel/@module.1/@submodule.1/@entity.0"/>
         <entity xsi:type="UnifiedMetamodel_:GeneralEntity" name="Point">
-          <property name="name" type="String"/>
+          <property name="idPoint" type="Num"/>
+          <property name="idSale" type="Num"/>
+          <property name="totalPoints" type="Num"/>
+          <property name="expDate" type="Date"/>
+          <property name="createdAt" type="Date"/>
         </entity>
       </submodule>
     </module>
@@ -34,14 +43,23 @@
         <operations xsi:type="UnifiedMetamodel_:Read" operates_on="//@domainmetamodel/@module.2/@submodule.0/@entity.0"/>
         <operations xsi:type="UnifiedMetamodel_:Create" operates_on="//@domainmetamodel/@module.2/@submodule.0/@entity.0"/>
         <entity xsi:type="UnifiedMetamodel_:GeneralEntity" name="Office">
+          <property name="idOffice" type="Num"/>
           <property name="name" type="String"/>
+          <property name="address" type="String"/>
+          <property name="city" type="String"/>
+          <property name="createdAt" type="Date"/>
+          <property name="updatedAt" type="Date"/>
         </entity>
       </submodule>
       <submodule name="RewardManagement">
         <operations xsi:type="UnifiedMetamodel_:Create" operates_on="//@domainmetamodel/@module.2/@submodule.1/@entity.0"/>
         <operations xsi:type="UnifiedMetamodel_:Read" operates_on="//@domainmetamodel/@module.2/@submodule.1/@entity.0"/>
         <entity xsi:type="UnifiedMetamodel_:GeneralEntity" name="Reward">
+          <property name="idReward" type="Num"/>
+          <property name="idOffice" type="Num"/>
           <property name="name" type="String"/>
+          <property name="pointNeed" type="Num"/>
+          <property name="isAvailable" type="Boolean"/>
         </entity>
       </submodule>
     </module>
@@ -50,7 +68,19 @@
         <operations xsi:type="UnifiedMetamodel_:Read" operates_on="//@domainmetamodel/@module.3/@submodule.0/@entity.0"/>
         <operations xsi:type="UnifiedMetamodel_:Create" operates_on="//@domainmetamodel/@module.3/@submodule.0/@entity.0"/>
         <entity xsi:type="UnifiedMetamodel_:GeneralEntity" name="Employee">
+          <property name="idEmployee" type="Num"/>
+          <property name="age" type="Num"/>
+          <property name="gender" type="Num"/>
           <property name="name" type="String"/>
+          <property name="suname" type="String"/>
+          <property name="email" type="String"/>
+          <property name="phone" type="Num"/>
+          <property name="indentificationNumber" type="Num"/>
+          <property name="createdAt" type="Date"/>
+          <property name="updatedAt" type="Date"/>
+          <property name="idOffice" type="Num"/>
+          <property name="position" type="String"/>
+          <property name="admitionDate" type="Date"/>
         </entity>
       </submodule>
     </module>
@@ -59,7 +89,16 @@
         <operations xsi:type="UnifiedMetamodel_:Read" operates_on="//@domainmetamodel/@module.4/@submodule.0/@entity.0"/>
         <operations xsi:type="UnifiedMetamodel_:Create" operates_on="//@domainmetamodel/@module.4/@submodule.0/@entity.0"/>
         <entity xsi:type="UnifiedMetamodel_:GeneralEntity" name="Client">
+          <property name="idClient" type="Num"/>
+          <property name="age" type="Num"/>
+          <property name="gender" type="Num"/>
           <property name="name" type="String"/>
+          <property name="suname" type="String"/>
+          <property name="email" type="String"/>
+          <property name="phone" type="Num"/>
+          <property name="indentificationNumber" type="Num"/>
+          <property name="createdAt" type="Date"/>
+          <property name="updatedAt" type="Date"/>
         </entity>
       </submodule>
     </module>
@@ -67,10 +106,21 @@
       <submodule name="Management">
         <operations xsi:type="UnifiedMetamodel_:Read" operates_on="//@domainmetamodel/@module.5/@submodule.0/@entity.0"/>
         <operations xsi:type="UnifiedMetamodel_:Create" operates_on="//@domainmetamodel/@module.5/@submodule.0/@entity.0"/>
+        <operations xsi:type="UnifiedMetamodel_:Create" operates_on="//@domainmetamodel/@module.1/@submodule.1/@entity.0"/>
         <entity xsi:type="UnifiedMetamodel_:GeneralEntity" name="Sale">
-          <property name="name" type="String"/>
+          <property name="idSale" type="Num"/>
+          <property name="idEmployee" type="Num"/>
+          <property name="idClient" type="Num"/>
+          <property name="idOffice" type="Num"/>
+          <property name="token" type="Num"/>
+          <property name="cost" type="Num"/>
+          <property name="paymentMethod" type="String"/>
+          <property name="createdAt" type="Date"/>
         </entity>
       </submodule>
     </module>
+    <relationdom xsi:type="UnifiedMetamodel_:Composition" source="//@domainmetamodel/@module.2/@submodule.0/@entity.0" target="//@domainmetamodel/@module.3/@submodule.0/@entity.0"/>
+    <relationdom xsi:type="UnifiedMetamodel_:Composition" source="//@domainmetamodel/@module.2/@submodule.0/@entity.0" target="//@domainmetamodel/@module.2/@submodule.1/@entity.0"/>
+    <relationdom xsi:type="UnifiedMetamodel_:Composition" source="//@domainmetamodel/@module.3/@submodule.0/@entity.0" target="//@domainmetamodel/@module.0/@submodule.0/@entity.0"/>
   </domainmetamodel>
 </UnifiedMetamodel_:Metamodel>
